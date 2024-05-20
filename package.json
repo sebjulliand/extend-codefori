@@ -1,0 +1,58 @@
+{
+  "name": "extend-code4i-example",
+  "publisher": "?",
+  "displayName": "Extend Code for IBM i extension",
+  "description": "This is an example of how you can extend Code for IBM i.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "extensionDependencies": [
+    "HalcyonTechLtd.code-for-ibmi"
+  ],
+  "license": "MIT",
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./dist/extension.js",
+  "l10n": "./l10n",
+  "contributes": {
+    "commands": [
+      {
+        "command": "run.ibmi.command",
+        "title": "%run.ibmi.command%",
+        "enablement": "code-for-ibmi:connected",
+        "category": "Extend C4i"
+      },
+      {
+        "command": "open.spooled.file",
+        "title": "%open.spooled.file%",
+        "enablement": "code-for-ibmi:connected",
+        "category": "Extend C4i"
+      }
+    ]
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "nls": "npx @vscode/l10n-dev export --outDir ./l10n ./src",
+    "build": "npm run clean && webpack --mode development",
+    "watch": "npm run clean && webpack --mode development --watch",
+    "vscode:prepublish": "npm run clean && webpack --mode production --devtool hidden-source-map",
+    "package": "vsce package --pre-release"
+  },
+  "devDependencies": {
+    "@halcyontech/vscode-ibmi-types": "^2.10",
+    "@types/node": "^18.19.10",
+    "@types/vscode": "1.80.0",
+    "@typescript-eslint/eslint-plugin": "^6.20.0",
+    "@typescript-eslint/parser": "^6.20.0",
+    "esbuild-loader": "^3.2.0",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.3.3",
+    "webpack": "^5.90.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
