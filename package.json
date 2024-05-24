@@ -32,8 +32,34 @@
         "title": "%open.spooled.file%",
         "enablement": "code-for-ibmi:connected",
         "category": "Extend C4i"
+      },
+      {
+        "command": "display.file.description",
+        "title": "%display.file.description%",
+        "enablement": "code-for-ibmi:connected",
+        "category": "Extend C4i"
+      }
+    ],
+  "submenus": [
+    {
+      "id": "cool.menu",
+      "label": "%cool.menu%"
+    }
+  ],
+  "menus": {
+    "cool.menu" :[
+      {
+        "command": "display.file.description",
+        "when": "viewItem =~ /object.file/"
+      }
+    ],
+    "view/item/context": [
+      {
+        "submenu": "cool.menu",
+        "when": "view === objectBrowser"
       }
     ]
+  }
   },
   "scripts": {
     "clean": "rimraf dist",

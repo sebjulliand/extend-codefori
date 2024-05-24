@@ -1,5 +1,6 @@
 import { CodeForIBMi } from '@halcyontech/vscode-ibmi-types';
 import * as vscode from 'vscode';
+import { displayFileDescription } from './commands/display-file-description';
 import { openSpooledFile } from './commands/open-spooled';
 import { runIBMiCommand } from './commands/run-ibmi-command';
 
@@ -16,7 +17,8 @@ export async function activate(context: vscode.ExtensionContext) {
 
 	context.subscriptions.push(
 		vscode.commands.registerCommand('run.ibmi.command', runIBMiCommand),
-		vscode.commands.registerCommand('open.spooled.file', openSpooledFile)
+		vscode.commands.registerCommand('open.spooled.file', openSpooledFile),
+		vscode.commands.registerCommand('display.file.description', displayFileDescription)
 	);
 
 	console.log("Code for IBM i extension activated");
