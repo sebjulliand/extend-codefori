@@ -1,6 +1,7 @@
 {
-  "run.ibmi.command":"Run an IBM i command",
-  "open.spooled.file":"Open a spooled file",
-  "cool.menu":"Cool menu",
-  "display.file.description":"Display file description"
+  "cool.menu": "Cool menu",
+  "display.file.description": "Display file description",
+  "display.member.description": "Display member description",
+  "open.spooled.file": "Open a spooled file",
+  "run.ibmi.command": "Run an IBM i command"
 }

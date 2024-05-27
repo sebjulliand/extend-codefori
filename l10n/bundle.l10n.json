@@ -1,8 +1,8 @@
 {
-  "This extension requires the 'halcyontechltd.code-for-ibmi' extension to be activated!": "This extension requires the 'halcyontechltd.code-for-ibmi' extension to be activated!",
-  "Enter an IBM i command": "Enter an IBM i command",
-  "Command successfully executed 🥳": "Command successfully executed 🥳",
-  "Open output": "Open output",
   "Command failed 🤬": "Command failed 🤬",
-  "Select a spooled file": "Select a spooled file"
+  "Command successfully executed 🥳": "Command successfully executed 🥳",
+  "Enter an IBM i command": "Enter an IBM i command",
+  "Open output": "Open output",
+  "Select a spooled file": "Select a spooled file",
+  "This extension requires the 'halcyontechltd.code-for-ibmi' extension to be activated!": "This extension requires the 'halcyontechltd.code-for-ibmi' extension to be activated!"
 }

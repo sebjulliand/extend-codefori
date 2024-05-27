@@ -38,6 +38,12 @@
         "title": "%display.file.description%",
         "enablement": "code-for-ibmi:connected",
         "category": "Extend C4i"
+      },
+      {
+        "command": "display.member.description",
+        "title": "%display.member.description%",
+        "enablement": "code-for-ibmi:connected",
+        "category": "Extend C4i"
       }
     ],
   "submenus": [
@@ -51,6 +57,10 @@
       {
         "command": "display.file.description",
         "when": "viewItem =~ /object.file/"
+      },
+      {
+        "command": "display.member.description",
+        "when": "viewItem =~ /member/"
       }
     ],
     "view/item/context": [
