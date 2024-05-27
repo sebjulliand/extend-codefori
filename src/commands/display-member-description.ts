@@ -16,7 +16,7 @@ export async function displayMemberDescription(objectItem: MemberItem) {
         <ul>
         ${Object.entries(result)
           .sort(([column1], [column2]) => column1.localeCompare(column2))
-          .filter(([column, value]) => Boolean(value))
+          .filter(([column, value]) => value !== null)
           .map(([column, value]) => `<li><b>${column}</b>: ${value}</li>`)
           .join("\n")
         }
